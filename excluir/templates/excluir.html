@@ -1,0 +1,17 @@
+{% if messages %}
+            {% for message in messages %}
+                <div class="alert {{message.tag}}" role="alert">
+                    {{message}}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+<form method="POST" action="{% url 'exc_produto' %}">{% csrf_token %}
+    <select name ="nome_produto">
+        {% for produto in produtos %}
+            <option value="{{produto.id}}">{{produto.nome}}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="EXCLUIR">   
+
+</form>
