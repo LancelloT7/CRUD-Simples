@@ -6,4 +6,4 @@ from .models import Produto
 
 def listar(request):
     produtos = Produto.objects.all()
-    return render(request, 'listar.html', {'produtos':produtos})
+    return render(request, 'listar.html', {'produtos': produtos})

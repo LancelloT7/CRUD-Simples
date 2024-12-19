@@ -26,7 +26,9 @@ sys.path.insert(0, os.path.join(PROJECT_ROOT, '../apps'))
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure--ojhuqg7)53k5l*a%&k9rb5vfpx3u$&6#cr+o9u#%0m_nkh@@d'
+SECRET_KEY = (
+    'django-insecure--ojhuqg7)53k5l*a%&k9rb5vfpx3u$&6#cr+o9u#%0m_nkh@@d'
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -118,8 +120,6 @@ LANGUAGE_CODE = 'pt-BR'
 TIME_ZONE = 'America/Sao_Paulo'
 
 
-
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
@@ -131,7 +131,6 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MESSAGE_TAGS = {
-
     constants.ERROR: 'alert-danger',
     constants.SUCCESS: 'alert-success',
 }

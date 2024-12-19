@@ -8,17 +8,21 @@ from django.contrib.messages import constants
 
 def cad_produto(request):
     produtos = Produto.objects.all()
-    if request.method =="GET":
+    if request.method == 'GET':
         return render(request, 'cadastrar.html', {'produtos': produtos})
-    elif request.method =="POST":
+    elif request.method == 'POST':
         nome = request.POST.get('nome_produto')
         try:
             produto = Produto(nome=nome)
             produto.save()
-            messages.add_message(request, constants.SUCCESS, 'Cadastro Realizado')
+            messages.add_message(
+                request, constants.SUCCESS, 'Cadastro Realizado'
+            )
             return render(request, 'cadastrar.html', {'produtos': produtos})
         except:
-            messages.add_message(request, constants.ERROR, 'Não foi possivel realizar o cadastro')
+            messages.add_message(
+                request,
+                constants.ERROR,
+                'Não foi possivel realizar o cadastro',
+            )
             return redirect('cad_produto')
-
-
