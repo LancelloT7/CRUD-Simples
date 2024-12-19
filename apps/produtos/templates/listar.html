@@ -1,0 +1,17 @@
+<table style="border-collapse: collapse; width: 100%;">
+    <thead>
+        <tr>
+            <th style="border: 1px solid black; padding: 8px;">Nome do Produto</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for produto in produtos %}
+            <tr>
+                <td style="border: 1px solid black; padding: 8px;">{{ produto.nome }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+  
+    

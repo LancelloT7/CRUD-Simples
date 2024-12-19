@@ -24,4 +24,5 @@ urlpatterns = [
     path('cadastrar/', include('cadastrar.urls')),
     path('excluir/', include('excluir.urls')),
     path('editar/', include('editar.urls')),
+    path('produtos/', include('produtos.urls')),
 ]
