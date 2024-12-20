@@ -7,7 +7,7 @@
         {% endif %}
 
 <form method="POST" action="{% url 'exc_produto' %}">{% csrf_token %}
-    <select name ="nome_produto">
+    <select name ="nome_produto" multiple="True">
         {% for produto in produtos %}
             <option value="{{produto.id}}">{{produto.nome}}</option>
         {% endfor %}
